@@ -1,0 +1,232 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://btp-app.appspot.com/_ah/api",
+  "name" : "orderapi",
+  "version" : "v1",
+  "description" : "orderapi",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://btp-app.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "orderapi.getPlacedOrders" : {
+      "path" : "collectionresponse_order/{no}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.OrderAPI.getPlacedOrders",
+      "request" : {
+        "parameters" : {
+          "no" : {
+            "type" : "string",
+            "required" : true
+          },
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "orderapi.removeOrder" : {
+      "path" : "order/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.OrderAPI.removeOrder",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "orderapi.updateOrder" : {
+      "path" : "order",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.OrderAPI.updateOrder",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "orderapi.getOrder" : {
+      "path" : "order/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.OrderAPI.getOrder",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "orderapi.insertOrder" : {
+      "path" : "order",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.OrderAPI.insertOrder",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "orderapi.getReceivedOrders" : {
+      "path" : "collectionresponse_order",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.OrderAPI.getReceivedOrders",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "CollectionResponse_Order" : {
+        "id" : "CollectionResponse_Order",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Order"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Order" : {
+        "id" : "Order",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "customer_id" : {
+            "type" : "string"
+          },
+          "list" : {
+            "type" : "string"
+          },
+          "deliveryno" : {
+            "type" : "string"
+          },
+          "deliveryaddress" : {
+            "type" : "string"
+          },
+          "state" : {
+            "type" : "integer"
+          },
+          "timestamp" : {
+            "type" : "string",
+            "format" : "int64"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.example.CSHOP.OrderAPI.getPlacedOrders" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Order"
+        }
+      },
+      "com.example.CSHOP.OrderAPI.removeOrder" : {
+      },
+      "com.example.CSHOP.OrderAPI.updateOrder" : {
+        "request" : {
+          "$ref" : "Order"
+        },
+        "response" : {
+          "$ref" : "Order"
+        }
+      },
+      "com.example.CSHOP.OrderAPI.getOrder" : {
+        "response" : {
+          "$ref" : "Order"
+        }
+      },
+      "com.example.CSHOP.OrderAPI.insertOrder" : {
+        "request" : {
+          "$ref" : "Order"
+        },
+        "response" : {
+          "$ref" : "Order"
+        }
+      },
+      "com.example.CSHOP.OrderAPI.getReceivedOrders" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Order"
+        }
+      }
+    }
+  }
+}

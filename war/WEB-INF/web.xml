@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.example.CSHOP.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>com.example.CSHOP.Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ForgotPassword</servlet-name>
+		<servlet-class>com.example.CSHOP.ForgotPassword</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ForgotPassword</servlet-name>
+		<url-pattern>/ForgotPassword</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Reset</servlet-name>
+		<servlet-class>com.example.CSHOP.Reset</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Reset</servlet-name>
+		<url-pattern>/Reset</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditProfile</servlet-name>
+		<servlet-class>com.example.CSHOP.EditProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditProfile</servlet-name>
+		<url-pattern>/EditProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderHandler</servlet-name>
+		<servlet-class>com.example.CSHOP.OrderHandler</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderHandler</servlet-name>
+		<url-pattern>/OrderHandler</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CSHOPServlet</servlet-name>
+		<servlet-class>com.example.CSHOP.CSHOPServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CSHOPServlet</servlet-name>
+		<url-pattern>/CSHOPServlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value>com.example.CSHOP.OrderAPI,com.example.CSHOP.ShopAPI,com.example.CSHOP.TokenAPI</param-value>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+ 
+  <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>App-Resources</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+   </security-constraint>
+   
+</web-app>
