@@ -1,87 +1,16 @@
+     $(document).ready(function(){
+      var i=1;
+     $("#add_row").click(function(){
+      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Item Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Quantity'  class='form-control input-md'></td>");
 
-$(document).ready(function(){
-
-	$("#logoutbutton").click(function(){
-		
-		var user = window.localStorage.getItem("user");
-		if(user==null){
-			alert("Login first");
-		}else{		
-			window.localStorage.setItem("user", null);
-			window.localStorage.clear();
-			window.location.replace("/index.html");	
-		}
-		
-	});
-	
-	$("#forgotpasswordbutton").click(function(){
-		
-		var user = window.localStorage.getItem("user");
-			if(user==null){
-				alert("Login first");
-			}else{
-				
-				$.ajax({  
-					type: "POST",  
-					url: "ForgotPassword",
-					data: {user:user },
-					success:function(data,status,xhr){
-								if(data){
-									alert(data);
-								}else{
-									alert(data);
-								}  
-	    					 }					
-				}); 						
-			}
-	 });
-	
-	$("#getordersbutton").click(function(){
-		
-		var user = window.localStorage.getItem("user");
-			if(user==null){
-				alert("Login first");
-			}else{
-				
-				$.ajax({  
-					type: "GET",  
-					url: "OrderHandler",
-					data: {user:user },
-					success:function(data,status,xhr){
-								if(xhr.getResponseHeader("AUTH")==1){
-									var json = JSON.parse(data);
-									var cursorstring = json.nextPageToken;
-									alert(json.orderlist);
-								}else{
-									alert("error");
-								}  
-	    					 }					
-				}); 						
-			}
-	 });
-	
-	$("#modifyorderbutton").click(function(){
-		
-		var user = window.localStorage.getItem("user");
-			if(user==null){
-				alert("Login first");
-			}else{
-				
-				$.ajax({  
-					type: "POST",  
-					url: "OrderHandler",
-					data: { user: user,
-						    orderid: "121333112121212121",
-						    state: "1" },
-					success:function(data,status,xhr){
-								if(data){
-									alert(data);
-								}else{
-									alert(data);
-								}  
-	    					 }					
-				}); 						
-			}
+      $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+      i++; 
+  });
+     $("#delete_row").click(function(){
+    	 if(i>1){
+		 $("#addr"+(i-1)).html('');
+		 i--;
+		 }
 	 });
 
 });

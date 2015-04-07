@@ -18,7 +18,7 @@ public class EditProfile extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		if(req.getParameter("editprofile")!=null){
+		if(Integer.parseInt(req.getParameter("state"))==0){
 			
 			String number = req.getParameter("number");
 			String shopname = req.getParameter("shopname");
@@ -44,9 +44,11 @@ public class EditProfile extends HttpServlet {
 		        	json.put("shopdetails", s.getShopDetails());
 		        	json.put("shopaddress", s.getShopAddress());
 		        	json.put("email", s.getEmail());
+		        	json.put("message", "Profile Successfully updated");
 		            PrintWriter out= resp.getWriter();
-		              out.print(json);
-		              resp.addHeader("AUTH", "1");
+		            out.print(json);
+		            resp.addHeader("AUTH", "1");
+		            
 		        }else{
 		        	PrintWriter out= resp.getWriter();
 		            out.println("No such user exists");
@@ -58,7 +60,7 @@ public class EditProfile extends HttpServlet {
 		
 		}
 		
-		else if(req.getParameter("editpassword")!=null){
+		else if(Integer.parseInt(req.getParameter("state"))==1){
 			
 			 String password = req.getParameter("password");
 			 String number = req.getParameter("number");
@@ -92,8 +94,8 @@ public class EditProfile extends HttpServlet {
 			        }
 			    }catch(Exception e){
 					System.out.println(e);
-				}
-			
+				}	
+				
 		 }
 		
 	}

@@ -41,22 +41,6 @@
         "body" : "autoTemplate(backendResponse)"
       }
     },
-    "shopapi.updateShop" : {
-      "path" : "shop",
-      "httpMethod" : "PUT",
-      "authLevel" : "NONE",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.example.CSHOP.ShopAPI.updateShop",
-      "request" : {
-        "body" : "autoTemplate(backendRequest)",
-        "bodyName" : "resource"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
     "shopapi.deleteShop" : {
       "path" : "shop/{no}",
       "httpMethod" : "DELETE",
@@ -76,6 +60,22 @@
       },
       "response" : {
         "body" : "empty"
+      }
+    },
+    "shopapi.updateShop" : {
+      "path" : "shop",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.ShopAPI.updateShop",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
       }
     },
     "shopapi.getShop" : {
@@ -115,10 +115,10 @@
           "password" : {
             "type" : "string"
           },
-          "shopName" : {
+          "shopNumber" : {
             "type" : "string"
           },
-          "shopNumber" : {
+          "shopName" : {
             "type" : "string"
           },
           "shopAddress" : {
@@ -139,6 +139,8 @@
           "$ref" : "Shop"
         }
       },
+      "com.example.CSHOP.ShopAPI.deleteShop" : {
+      },
       "com.example.CSHOP.ShopAPI.updateShop" : {
         "request" : {
           "$ref" : "Shop"
@@ -146,8 +148,6 @@
         "response" : {
           "$ref" : "Shop"
         }
-      },
-      "com.example.CSHOP.ShopAPI.deleteShop" : {
       },
       "com.example.CSHOP.ShopAPI.getShop" : {
         "response" : {

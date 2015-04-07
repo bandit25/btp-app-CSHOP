@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/orderapi/v1/20150331065630/java/1.18.0-rc/btp_app_appspot_com-orderapi-v1-20150331065630-java-1.18.0-rc-sources.jar", 
-      "path": "btp_app_appspot_com-orderapi-v1-20150331065630-java-1.18.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/orderapi/v1/20150407092124/java/1.18.0-rc/btp_app_appspot_com-orderapi-v1-20150407092124-java-1.18.0-rc-sources.jar", 
+      "path": "btp_app_appspot_com-orderapi-v1-20150407092124-java-1.18.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2015-03-31 06:56"
+      "timestamp": "2015-04-07 09:21"
     }, 
     {
-      "path": "btp_app_appspot_com-orderapi-v1-20150331065630-java-1.18.0-rc.jar.properties", 
+      "path": "btp_app_appspot_com-orderapi-v1-20150407092124-java-1.18.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -674,5 +674,5 @@
   "version": "v1", 
   "language_version": "1.18.0-rc", 
   "id": "orderapi:v1", 
-  "revision": 20150331065630
+  "revision": 20150407092124
 }

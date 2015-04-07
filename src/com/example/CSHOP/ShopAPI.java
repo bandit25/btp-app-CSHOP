@@ -16,7 +16,6 @@ import com.google.api.server.spi.config.ApiMethod;
 @Api(name="shopapi", version ="v1", description = "cshopapi")
 public class ShopAPI {
 	
-	public static List<Shop> Shops = new ArrayList<Shop>();
 	
 	@ApiMethod(name ="insertShop")
 	public Shop insertShop(Shop c){
@@ -28,8 +27,6 @@ public class ShopAPI {
 				}
 			}
 			mgr.makePersistent(c);
-		}catch(Exception e){
-			
 		}finally {
 			mgr.close();
 		}
@@ -44,8 +41,6 @@ public class ShopAPI {
 			if(!existsShop(c)){
 				return null;
 			}
-		}catch(Exception e){
-			
 		}finally{
 			mgr.close();
 		}
@@ -60,8 +55,6 @@ public class ShopAPI {
 				return null;
 			}
 			mgr.makePersistent(c);
-		}catch(Exception e){
-			
 		}finally{
 			mgr.close();
 		}

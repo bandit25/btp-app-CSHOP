@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+    <title>Title</title>
+    <link href="www/css/bootstrap.min.css" rel="stylesheet">
+    <link href="www/css/reg.css" rel="stylesheet">
+	
+  </head>
+ 
+<body>
+    <div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+				<form role="form" id="regform">
+					<h2>Register</h2>
+					<hr class="colorgraph">
+					
+					<div class="form-group">
+						<input type="text" id="shopname" class="form-control input-lg" placeholder="Shop Name" tabindex="1">
+						<div id="err_fname" style="color:#F03"></div><br>
+					</div>
+					
+					<div class="form-group">
+						<input type="text" id="mobile" class="form-control input-lg" placeholder="Mobile Number" tabindex="2">
+						<div id="err_mobile" style="color:#F03"></div><br>
+					</div>
+					
+					<div class="form-group">
+						<input type="text" id="shopnumber" class="form-control input-lg" placeholder="Shop Number" tabindex="3">
+						<div id="err_shopnumber" style="color:#F03"></div><br>
+					</div>
+					
+					<div class="form-group">
+						<input type="text" id="shopdetails" class="form-control input-lg" placeholder="Shop Details" tabindex="4">
+						<div id="err_shopdetails" style="color:#F03"></div><br>
+					</div>
+					
+					<div class="form-group">
+						<input type="text" id="shopaddress" class="form-control input-lg" placeholder="Shop Address" tabindex="5">
+						<div id="err_locality" style="color:#F03"></div><br>
+					</div>			
+
+					<div class="form-group">
+						<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Shop Email" tabindex="6">
+						<div id="err_email" style="color:#F03"></div><br>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="7">
+								<div id="err_pass" style="color:#F03"></div><br>
+							</div>
+						</div>
+						
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="password" id="repassword" class="form-control input-lg" onBlur="repassword_validate()" placeholder="Confirm Password" tabindex="8">
+								<div id="err_repass" style="color:#F03"></div><br>
+							</div>
+							
+						</div>
+					</div>
+					
+					<hr class="colorgraph">
+					
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<button type="button" id="registerbutton" class="btn btn-primary btn-block btn-lg" tabindex="9">Register</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+     
+                   
+    <script src = "www/js/jquery-1.11.2.min.js"></script>   
+    <script src = "www/js/bootstrap.min.js"></script>
+    <script type ="text/javascript" src = "www/js/signupvalidation.js"></script>
+	<script type ="text/javascript" src = "www/js/signuphandler.js"></script>
+
+    </body>
+
+    </html>

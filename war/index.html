@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-    
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-       
-        <title>CSHOP</title> 
-        <link rel="stylesheet" type="text/css" href="www/css/topcoat-mobile-light.css" />
-		<script src="phonegap.js"></script>
-		<script src="www/js/jquery-1.11.2.min.js"></script>
-        <script type ="text/javascript" src = "www/js/login.js"></script>
-		
-		
-        <!-- <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="www/js/index.js"></script>
-        <script type="text/javascript">app.initialize()</script>
-        <script src="https://apis.google.com/js/client.js?onload=init"></script>-->
-               	
-           
-		<style type="text/css">
-		.wrapper{
-			text-align:center;
-		}
-		</style>					
+<html lang="en">
+
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	
-    </head>
-    
+    <title>Login</title>	
+    <link href="www/css/bootstrap.min.css" rel="stylesheet">
+    <link href="www/css/signin.css" rel="stylesheet">   
+	
+  </head>
+ 
 <body>
-<div class="wrapper">
+    <div class="container">
+
+		<div class="row" style="margin-top:20px">
+			<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+				<form role="form">
+					<fieldset>
+						<h2>Login</h2>
+						<hr class="colorgraph">
+						
+						<div class="form-group">
+							<input type="text" id="username" class="form-control input-lg" placeholder="Mobile Number"><br>
+						</div>
+						
+						<div class="form-group">
+							<input type="password" id="password" class="form-control input-lg" placeholder="Password">
+						</div>
+						
+					<div class ="row">					
+							<a href="" data-toggle="modal" data-target="#myModal" class="btn btn-link pull-right">Forgot Password?</a>
+						</div>
+							
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Forgot Password</h4>
+										</div>
+														
+										<div class="modal-body">
+											<div class="form-group">
+												<input type="text" id="user" class="form-control input-lg" placeholder="Mobile Number">
+											</div>
+										</div>
+														
+										<div class="modal-footer">
+											<button type="button" id = "forgotpasswordbutton" class="btn btn-primary" data-dismiss="modal">Submit</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						
+						<hr class="colorgraph">
+        
+						<div class="row">						
+							<div class="col-xs-6 col-sm-6 col-md-6">								
+									<input type="button" id = "loginbutton" class="btn btn-lg btn-success btn-block" value="Sign In">
+							</div>
+							
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<a href="registershop.html" class="btn btn-lg btn-primary btn-block">Register</a>
+							</div>							
+						</div>
+						
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
 	
-	<img class="img-circle" data-src="holder.js/140x140" alt="100x100" src="www/logo.jpg" style="margin-top:40px; width: 100px;border-color:black; border:2px solid; height:100px;-webkit-border-radius: 200px;
-    	-moz-border-radius: 200px;
-    	-ms-border-radius: 200px;
-   	 	border-radius: 200px;box-shadow: 00px 00px 200px #ffffff;">
-    <p style="padding-bottom:100px;"></p>
-    
-    <form id="loginform">
-	<input type="text" class="topcoat-text-input" placeholder="Mobile No." id ="username"><br><br>
-	<input type="password" class="topcoat-text-input" placeholder="Password" id ="password"><br><br></form>
+	<!--<script type="text/javascript" src="www/js/index.js"></script>
+        <script type="text/javascript">app.initialize()</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+	<script src="phonegap.js"></script>	
+	<script src="www/js/jquery-1.11.2.min.js"></script>
+	<script src="www/js/bootstrap.min.js"></script>
+    <script src="www/js/login.js"></script>
+	<script src="www/js/loginhandler.js"></script>
 	
-	<button type ="submit" class="topcoat-button" id ="loginbutton">Login</button><br><br>	
-	<button class="topcoat-button" id ="registerbutton" onclick = "window.location='signup.html'">Register</button>
-	
-</div>       	
-		
-    </body>
-    
+</body>
 </html>
-
-

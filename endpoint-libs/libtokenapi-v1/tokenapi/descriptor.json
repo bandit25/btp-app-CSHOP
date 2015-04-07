@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/tokenapi/v1/20150331065451/java/1.18.0-rc/btp_app_appspot_com-tokenapi-v1-20150331065451-java-1.18.0-rc-sources.jar", 
-      "path": "btp_app_appspot_com-tokenapi-v1-20150331065451-java-1.18.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/tokenapi/v1/20150407091950/java/1.18.0-rc/btp_app_appspot_com-tokenapi-v1-20150407091950-java-1.18.0-rc-sources.jar", 
+      "path": "btp_app_appspot_com-tokenapi-v1-20150407091950-java-1.18.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2015-03-31 06:54"
+      "timestamp": "2015-04-07 09:19"
     }, 
     {
-      "path": "btp_app_appspot_com-tokenapi-v1-20150331065451-java-1.18.0-rc.jar.properties", 
+      "path": "btp_app_appspot_com-tokenapi-v1-20150407091950-java-1.18.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -674,5 +674,5 @@
   "version": "v1", 
   "language_version": "1.18.0-rc", 
   "id": "tokenapi:v1", 
-  "revision": 20150331065451
+  "revision": 20150407091950
 }

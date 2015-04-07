@@ -26,6 +26,8 @@ public class Order implements Serializable {
 	@Persistent
 	String customer_id;
 	@Persistent
+	String customer_name;
+	@Persistent
 	String list;
 	@Persistent
 	String deliveryno;
@@ -50,6 +52,13 @@ public class Order implements Serializable {
 	}
 	public void setCustomer_id(String Customer_id){
 		this.customer_id = Customer_id;
+	}
+	
+	public String getCustomer_name(){
+		return customer_name;
+	}
+	public void setCustomer_name(String Customer_name){
+		this.customer_name = Customer_name;
 	}
 	
 	public String getList() {

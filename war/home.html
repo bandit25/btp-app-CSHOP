@@ -1,29 +1,209 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-		<meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-		 
-		<link rel="stylesheet" type="text/css" href="www/css/topcoat-mobile-light.css" /> 
-		<script src="www/js/jquery-1.11.2.min.js"></script>
-        <script type ="text/javascript" src = "www/js/home.js"></script>
-</head>
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+    <title>List</title>
+	
+    <link href="www/css/bootstrap.min.css" rel="stylesheet">
+    <link href="www/css/list.css" rel="stylesheet">
+    <link href="www/css/home.css" rel="stylesheet">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+  </head>
+     
 <body>
-		<h1>Welcome there</h1>
-		<button type= "submit" class="topcoat-button" id ="logoutbutton">Logout</button><br>
-		<button type= "submit" class="topcoat-button" id ="forgotpasswordbutton">ForgotPassword</button><br>
-		<button type= "submit" class="topcoat-button" id ="profilebutton">Profile</button><br>
-		<button type= "submit" name="editprofile" value="editprofile" class="topcoat-button" id ="editprofilebutton">EditProfile</button><br>
-		<button type= "submit" name="editpassword" value="editpassword" class="topcoat-button" id ="editpasswordbutton">EditPassword</button><br>
-		<button type= "submit" class="topcoat-button" id ="getordersbutton">GetOrders</button><br>
-		<button type= "submit" class="topcoat-button" id ="modifyorderbutton">ModifyOrder</button><br>
+	<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">CSHOP</a>
+				</div>
+				
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Admin <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="profileshop.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+								<li><a href="list.html"><span class="glyphicon glyphicon-list-alt"></span>Orders</a></li>
+								<li><button type="button" id= "logoutbutton"><span class="glyphicon glyphicon-off"></span>Logout</button></li>
+							</ul>
+						</li>       
+						
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-comment"></span>Chats <span class="label label-primary">42</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><span class="label label-warning">7:00 AM</span>Hi :)</a></li>
+								<li><a href="#"><span class="label label-warning">8:00 AM</span>How are you?</a></li>
+								<li><a href="#"><span class="label label-warning">9:00 AM</span>What are you doing?</a></li>
+								<li class="divider"></li>
+								<li><a href="#" class="text-center">View All</a></li>
+							</ul>
+						</li>
+            
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span>Notifications<span class="label label-info">32</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><span class="label label-warning">4:00 AM</span>Favourites Snippet</a></li>
+								<li><a href="#"><span class="label label-warning">4:30 AM</span>Email marketing</a></li>
+								<li><a href="#"><span class="label label-warning">5:00 AM</span>Subscriber focused email design</a></li>
+								<li class="divider"></li>
+								<li><a href="#" class="text-center">View All</a></li>
+							</ul>
+						</li>          
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Settings</h4>
+					</div>
+					<div class="modal-body">
+						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Chat</label></div>
+						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Notification</label></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="span5">
+					<h4 align="center"><a href="order1.html">Order 1</a></h4>
+					<div class="row bs-wizard" style="border-bottom:0;">
+                
+						<div class="col-xs-3 bs-wizard-step complete">
+							<div class="text-center bs-wizard-stepnum">Step 1</div>
+							<div class="progress"><div class="progress-bar"></div></div>
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center">Ordered</div>
+						</div>
+                
+						<div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+							<div class="text-center bs-wizard-stepnum">Step 2</div>
+							<div class="progress"><div class="progress-bar"></div></div>
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center">Shipped</div>
+						</div>
+                
+						<div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+							<div class="text-center bs-wizard-stepnum">Step 3</div>
+							<div class="progress"><div class="progress-bar"></div></div>
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center">Delivered</div>
+						</div>
+                
+						<div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
+							<div class="text-center bs-wizard-stepnum">Step 4</div>
+							<div class="progress"><div class="progress-bar"></div></div>
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center"> Completed</div>
+						</div>
+						
+					</div>
+				</div>
 
-
+			</div>
+		</div>
+    
+		<hr>     
+		<div class="row">
+			<div class="span5">
+				<h4 align="center"><a href="#">Order 2</a></h4>
+			</div>
+			<div class="row bs-wizard" style="border-bottom:0;">
+			
+				<div class="col-xs-3 bs-wizard-step complete">
+					<div class="text-center bs-wizard-stepnum">Step 1</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center">Ordered</div>
+				</div>
+                
+                <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+					<div class="text-center bs-wizard-stepnum">Step 2</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center">Shipped</div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+					<div class="text-center bs-wizard-stepnum">Step 3</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center">Delivered</div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
+					<div class="text-center bs-wizard-stepnum">Step 4</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center"> Completed</div>
+                </div>
+				
+            </div>
+		</div>
+		
+		<hr>
+     
+		<div class="row">
+			<div class="span5">
+				<h4 align="center"><a href="#">Order 3</a></h4>
+			</div>
+			
+			<div class="row bs-wizard" style="border-bottom:0;">
+				<div class="col-xs-3 bs-wizard-step complete">
+					<div class="text-center bs-wizard-stepnum">Step 1</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center">Ordered</div>
+				</div>
+                
+				<div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+					<div class="text-center bs-wizard-stepnum">Step 2</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center">Shipped</div>
+				</div>
+					
+				<div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+					<div class="text-center bs-wizard-stepnum">Step 3</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center">Delivered</div>
+				</div>
+                
+                <div class="col-xs-3 bs-wizard-step active"><!-- active -->
+					<div class="text-center bs-wizard-stepnum">Step 4</div>
+					<div class="progress"><div class="progress-bar"></div></div>
+					<a href="#" class="bs-wizard-dot"></a>
+					<div class="bs-wizard-info text-center"> Completed</div>
+                </div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="www/js/jquery-1.11.2.min.js"></script>
+    <script src="www/js/bootstrap.min.js"></script>
+    <script src="www/js/homehandler.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+	
 </body>
 </html>

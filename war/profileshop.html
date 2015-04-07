@@ -1,0 +1,224 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+    <title>List</title>
+	
+    <link href="www/css/bootstrap.min.css" rel="stylesheet">
+    <link href="www/css/list.css" rel="stylesheet">
+    <link href="www/css/home.css" rel="stylesheet">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+  </head>
+     
+<body>
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">CSHOP</a>
+				</div>
+				
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Admin <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+								<li><a href="list.html"><span class="glyphicon glyphicon-list-alt"></span>Orders</a></li>
+								<li class="divider"></li>
+								<li><a href="index.html"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+							</ul>
+						</li>       
+						
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-comment"></span>Chats <span class="label label-primary">42</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><span class="label label-warning">7:00 AM</span>Hi :)</a></li>
+								<li><a href="#"><span class="label label-warning">8:00 AM</span>How are you?</a></li>
+								<li><a href="#"><span class="label label-warning">9:00 AM</span>What are you doing?</a></li>
+								<li class="divider"></li>
+								<li><a href="#" class="text-center">View All</a></li>
+							</ul>
+						</li>
+            
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span>Notifications<span class="label label-info">32</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><span class="label label-warning">4:00 AM</span>Favourites Snippet</a></li>
+								<li><a href="#"><span class="label label-warning">4:30 AM</span>Email marketing</a></li>
+								<li><a href="#"><span class="label label-warning">5:00 AM</span>Subscriber focused email design</a></li>
+								<li class="divider"></li>
+								<li><a href="#" class="text-center">View All</a></li>
+							</ul>
+						</li>          
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Settings</h4>
+					</div>
+					<div class="modal-body">
+						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Chat</label></div>
+						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Notification</label></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+					<div class="panel panel-info">
+					
+						<div class="panel-heading">
+							<h3 class="panel-title">Profile</h3>
+						</div>
+						
+						<div class="panel-body">
+							<div class="row">
+								<div class=" col-md-9 col-lg-9 "> 
+									<table class="table table-user-information">
+										<tbody>
+											<tr>
+												<td>Shop Name</td>
+												<td>Ambika Stores</td>
+											</tr>																						
+											<tr>
+												<td>Phone Number</td>
+												<td>8460441891</td>
+											</tr>   
+											<tr>
+												<td>Shop Number</td>
+												<td>564</td>
+											</tr>
+											<tr>
+												<td>Shop Details</td>
+												<td>A complete grocery store</td>
+											</tr>
+											<tr>
+												<td>Shop Address</td>
+												<td>DAIICT Gandhinagar</td>
+											</tr>
+											<tr>
+												<td>Shop Email</td>
+												<td><a href="skeval63@gmail.com">skeval63@gmail.com</a></td>
+											</tr>
+										</tbody>    
+									</table>                          
+                      
+									<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">Change Password</button>
+									<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h4 class="modal-title" id="myModalLabel2">Change Password</h4>
+												</div>
+												
+												<div class="modal-body">
+													<div class="form-group">
+														<label>New Password<br>
+															<input type="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="7">
+															<div id="err_password" style="color:#F03"></div>
+															</label>
+													</div>
+													<div class="form-group">
+														<label>Re-type Password<br>
+															<input type="password" name="repassword" id="repassword" class="form-control input-lg" placeholder="Confirm Password" tabindex="8">															
+															<div id="err_repassword" style="color:#F03"></div>
+														</label>
+													</div>
+												</div>
+													
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="button" id="changepasswordbutton" class="btn btn-primary">Save changes</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">Update Profile</button>
+									<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h4 class="modal-title" id="myModalLabel">Update Profile</h4>
+												</div>	
+													
+												<div class="modal-body">
+													<div class="form-group">
+														<label>Shop Name<br>
+															<input type="text" id="shopname" class="form-control input-lg" placeholder="Shop Name" tabindex="1" >
+															<div id="err_shopname" style="color:#F03"></div>
+														</label>
+													</div>													
+													<div class="form-group">
+														<label>Shop Number<br>
+															<input type="text" id="shopnumber" class="form-control input-lg" placeholder="Shop Number" tabindex="3">
+															<div id="err_shopnumber" style="color:#F03"></div>
+														</label>												
+													</div>
+													<div class="form-group">
+														<label>Shop Details<br>													  
+															<input type="text" id="shopdetails" class="form-control input-lg" placeholder="Shop Details" tabindex="4">
+															<div id="err_shopdetails" style="color:#F03"></div>
+														</label>
+													</div>
+													<div class="form-group">
+														<label>Shop Address<br>
+															<input type="text" id="shopaddress" class="form-control input-lg" placeholder="Shop Address" tabindex="5">
+															<div id="err_shopdetails" style="color:#F03"></div>
+														</label>
+													</div>
+													<div class="form-group">
+														<label>Shop Email<br>
+															<input type="email" id="shopemail" class="form-control input-lg" placeholder="Shop Email" tabindex="6">
+															<div id="err_shopemail" style="color:#F03"></div>
+														</label>
+													</div>
+												</div>	
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="button" id ="updateprofilebutton" class="btn btn-primary">Save changes</button>
+												</div>
+											</div>
+										</div>										  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <script src="www/js/jquery-1.11.2.min.js"></script>
+    <script src="www/js/bootstrap.min.js"></script>
+    <script src="www/js/profile.js"></script>
+	<script src="www/js/profilehandler.js"></script>
+    <script type ="text/javascript" src = "www/js/signupvalidation.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+	
+    </body>
+</html>

@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/KUtZ5PqX0-0UpjAoh4NzgPXYddw\"",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/DmiTrAYB2Jp30w3x76tqTlq7u68\"",
  "discoveryVersion": "v1",
  "id": "orderapi:v1",
  "name": "orderapi",
@@ -91,6 +91,9 @@
    "type": "object",
    "properties": {
     "customer_id": {
+     "type": "string"
+    },
+    "customer_name": {
      "type": "string"
     },
     "deliveryaddress": {
