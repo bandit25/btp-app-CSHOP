@@ -1,7 +1,27 @@
 
 $(document).ready(function(){
+	
+	var user = window.localStorage.getItem("user");
+	if(user==null){
+		window.location.href ="index.html";	
+	}else{
+			$.ajax({  
+				type: "GET",  
+				url: "https://7-dot-btp-app.appspot.com/OrderHandler",
+				data: {user:user },
+				success:function(data,status,xhr){
+							if(xhr.getResponseHeader("AUTH")==1){
+								var json = JSON.parse(data);
+								var cursorstring = json.nextPageToken;
+								alert(json.orderslist);
+							}else{
+								alert("error");
+							}  
+	    				 }					
+			}); 						
+	}
 
-	$("#logoutbutton").click(function(){
+	$("#logout").click(function(){
 		
 			window.localStorage.setItem("user", null);
 			window.localStorage.clear();
@@ -10,43 +30,18 @@ $(document).ready(function(){
 	});
 	
 	
-	
-	$("#getordersbutton").click(function(){
-		
-		var user = window.localStorage.getItem("user");
-			if(user==null){
-				alert("Login first");
-			}else{
-				
-				$.ajax({  
-					type: "GET",  
-					url: "OrderHandler",
-					data: {user:user },
-					success:function(data,status,xhr){
-								if(xhr.getResponseHeader("AUTH")==1){
-									var json = JSON.parse(data);
-									var cursorstring = json.nextPageToken;
-									alert(json.orderlist);
-								}else{
-									alert("error");
-								}  
-	    					 }					
-				}); 						
-			}
-	 });
-	
 	$("#modifyorderbutton").click(function(){
 		
 		var user = window.localStorage.getItem("user");
 			if(user==null){
-				alert("Login first");
+				window.location.href ="index.html";
 			}else{
 				
 				$.ajax({  
 					type: "POST",  
-					url: "OrderHandler",
+					url: "https://7-dot-btp-app.appspot.com/OrderHandler",
 					data: { user: user,
-						    orderid: "121333112121212121",
+						    orderid: "5147289865682944",
 						    state: "1" },
 					success:function(data,status,xhr){
 								if(data){

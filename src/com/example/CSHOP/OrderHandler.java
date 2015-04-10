@@ -31,7 +31,7 @@ public class OrderHandler extends HttpServlet {
 			Gson gson = new Gson();
 			String str = gson.toJson(orders.getItems());
 			json.put("nextPageToken",orders.getNextPageToken());
-			json.put("orderlist", str);
+			json.put("orderslist", str);
 			PrintWriter out= resp.getWriter();
 	        out.print(json);
 	        resp.addHeader("AUTH", "1");
@@ -57,7 +57,8 @@ public class OrderHandler extends HttpServlet {
 			order.setState(state);
 			Order o = oapi.updateOrder(order);
 			if(o!=null){
-				
+				PrintWriter out= resp.getWriter();
+	            out.println("Order Modified Successfully");
 				resp.addHeader("AUTH", "1");
 	        }else{
 	        	PrintWriter out= resp.getWriter();
