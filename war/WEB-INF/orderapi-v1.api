@@ -50,22 +50,6 @@
         "body" : "autoTemplate(backendResponse)"
       }
     },
-    "orderapi.updateOrder" : {
-      "path" : "order",
-      "httpMethod" : "PUT",
-      "authLevel" : "NONE",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.example.CSHOP.OrderAPI.updateOrder",
-      "request" : {
-        "body" : "autoTemplate(backendRequest)",
-        "bodyName" : "resource"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
     "orderapi.removeOrder" : {
       "path" : "order/{id}",
       "httpMethod" : "DELETE",
@@ -85,6 +69,22 @@
       },
       "response" : {
         "body" : "empty"
+      }
+    },
+    "orderapi.updateOrder" : {
+      "path" : "order",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.CSHOP.OrderAPI.updateOrder",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
       }
     },
     "orderapi.getOrder" : {
@@ -202,6 +202,8 @@
           "$ref" : "CollectionResponse_Order"
         }
       },
+      "com.example.CSHOP.OrderAPI.removeOrder" : {
+      },
       "com.example.CSHOP.OrderAPI.updateOrder" : {
         "request" : {
           "$ref" : "Order"
@@ -209,8 +211,6 @@
         "response" : {
           "$ref" : "Order"
         }
-      },
-      "com.example.CSHOP.OrderAPI.removeOrder" : {
       },
       "com.example.CSHOP.OrderAPI.getOrder" : {
         "response" : {

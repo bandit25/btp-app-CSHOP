@@ -38,7 +38,7 @@ public class OrderHandler extends HttpServlet {
 			
 			
 		}catch(Exception e){
-			
+			throw new ServletException(e);
 		}
 	}
 	//function to handle modification of order
@@ -62,12 +62,12 @@ public class OrderHandler extends HttpServlet {
 				resp.addHeader("AUTH", "1");
 	        }else{
 	        	PrintWriter out= resp.getWriter();
-	            out.println("There was some error.Please try again");
+	            out.println("Error.Please try again");
 	            resp.addHeader("AUTH", "0");
 			}
 			
 		}catch(Exception e){
-			
+			throw new ServletException(e);
 		}
 		
 	}

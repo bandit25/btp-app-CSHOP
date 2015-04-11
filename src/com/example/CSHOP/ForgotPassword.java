@@ -25,10 +25,10 @@ public class ForgotPassword extends HttpServlet {
 			String token = tokenobj.getUUID();
 			tapi.sendEmail(email, token);
 			PrintWriter out= resp.getWriter();
-            out.println("email has been sent");
+            out.println("Follow the instructions in the sent Email to reset your password.");
 			
 		}catch(Exception e){
-			System.out.println(e);
+			throw new ServletException(e);
 		}	
 	}
 

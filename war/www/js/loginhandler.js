@@ -36,11 +36,7 @@ $(document).ready(function(){
 					url: "https://7-dot-btp-app.appspot.com/ForgotPassword",
 					data: {user:user },
 					success:function(data,status,xhr){
-								if(data){
-									alert(data);
-								}else{
-									alert(data);
-								}  
+									alert(data);								
 	    					 }					
 				}); 						
 	});

@@ -62,6 +62,24 @@
 		<url-pattern>/CSHOPServlet</url-pattern>
 	</servlet-mapping>
 	
+	<error-page>
+	    <error-code>404</error-code>
+	    <location>/CSHOPServlet</location>
+  	</error-page>   
+  	<error-page>
+	  	<exception-type>javax.servlet.ServletException</exception-type>
+	  	<location>/CSHOPServlet</location>
+  	</error-page>
+  
+  	<error-page>
+	    <error-code>403</error-code>
+	    <location>/CSHOPServlet</location>
+  	</error-page>   
+  	<error-page>
+	  	<exception-type>javax.io.IOException</exception-type>
+	  	<location>/CSHOPServlet</location>
+  	</error-page>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>

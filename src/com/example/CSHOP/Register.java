@@ -65,12 +65,12 @@ public class Register extends HttpServlet {
 	              resp.addHeader("AUTH", "1");
 	        }else{
 	        	PrintWriter out= resp.getWriter();
-	            out.println("Username already exists");
+	            out.println("Username Already Exists");
 	            resp.addHeader("AUTH", "0");
 	        	
 	        }
 		}catch(JSONException e){
-			
+			throw new ServletException(e);
 		}
 		
 	}

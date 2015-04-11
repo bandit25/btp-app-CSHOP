@@ -15,7 +15,7 @@ $(document).ready(function(){
 								var cursorstring = json.nextPageToken;
 								alert(json.orderslist);
 							}else{
-								alert("error");
+								alert("Error.Please Try Again");
 							}  
 	    				 }					
 			}); 						
@@ -23,8 +23,12 @@ $(document).ready(function(){
 
 	$("#logout").click(function(){
 		
-			window.localStorage.setItem("user", null);
-			window.localStorage.clear();
+		  window.localStorage.setItem("user", null);
+		  window.localStorage.setItem("shopname", null);
+		  window.localStorage.setItem("shopnumber", null);
+		  window.localStorage.setItem("shopdetails", null);
+		  window.localStorage.setItem("shopaddress", null);
+		  window.localStorage.setItem("shopemail", null);
 			window.location.href ="index.html";	
 		
 	});
@@ -44,7 +48,7 @@ $(document).ready(function(){
 						    orderid: "5147289865682944",
 						    state: "1" },
 					success:function(data,status,xhr){
-								if(data){
+						if(xhr.getResponseHeader("AUTH")==1){
 									alert(data);
 								}else{
 									alert(data);

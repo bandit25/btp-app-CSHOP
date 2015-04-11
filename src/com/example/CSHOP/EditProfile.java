@@ -44,18 +44,18 @@ public class EditProfile extends HttpServlet {
 		        	json.put("shopdetails", s.getShopDetails());
 		        	json.put("shopaddress", s.getShopAddress());
 		        	json.put("email", s.getEmail());
-		        	json.put("message", "Profile Successfully updated");
+		        	json.put("message", "Profile Successfully Updated");
 		            PrintWriter out= resp.getWriter();
 		            out.print(json);
 		            resp.addHeader("AUTH", "1");
 		            
 		        }else{
 		        	PrintWriter out= resp.getWriter();
-		            out.println("No such user exists");
+		            out.println("No Such User Exists");
 		            resp.addHeader("AUTH", "0");		        	
 		        }
 		    }catch(Exception e){
-				System.out.println(e);
+				throw new ServletException(e);
 			}
 		
 		}
@@ -83,17 +83,17 @@ public class EditProfile extends HttpServlet {
 			    	if(s!=null){
 			    		
 			            PrintWriter out= resp.getWriter();
-			            out.println("Password successfully updated");
+			            out.println("Password Successfully Updated");
 			            resp.addHeader("AUTH", "1");
 			            
 			        }else{
 			        	PrintWriter out= resp.getWriter();
-			            out.println("No such user exists");
+			            out.println("No Such User Exists");
 			            resp.addHeader("AUTH", "0");
 			        	
 			        }
 			    }catch(Exception e){
-					System.out.println(e);
+			    	throw new ServletException(e);
 				}	
 				
 		 }
