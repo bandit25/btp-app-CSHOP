@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/shopapi/v1/20150407091808/java/1.18.0-rc/btp_app_appspot_com-shopapi-v1-20150407091808-java-1.18.0-rc-sources.jar", 
-      "path": "btp_app_appspot_com-shopapi-v1-20150407091808-java-1.18.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/shopapi/v1/20150418063509/java/1.18.0-rc/btp_app_appspot_com-shopapi-v1-20150418063509-java-1.18.0-rc-sources.jar", 
+      "path": "btp_app_appspot_com-shopapi-v1-20150418063509-java-1.18.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2015-04-07 09:18"
+      "timestamp": "2015-04-18 06:35"
     }, 
     {
-      "path": "btp_app_appspot_com-shopapi-v1-20150407091808-java-1.18.0-rc.jar.properties", 
+      "path": "btp_app_appspot_com-shopapi-v1-20150418063509-java-1.18.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -674,5 +674,5 @@
   "version": "v1", 
   "language_version": "1.18.0-rc", 
   "id": "shopapi:v1", 
-  "revision": 20150407091808
+  "revision": 20150418063509
 }

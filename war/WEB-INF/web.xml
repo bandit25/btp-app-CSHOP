@@ -53,14 +53,7 @@
 		<url-pattern>/OrderHandler</url-pattern>
 	</servlet-mapping>
 	
-	<servlet>
-		<servlet-name>CSHOPServlet</servlet-name>
-		<servlet-class>com.example.CSHOP.CSHOPServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CSHOPServlet</servlet-name>
-		<url-pattern>/CSHOPServlet</url-pattern>
-	</servlet-mapping>
+	
 	
 	<error-page>
 	    <error-code>404</error-code>

@@ -33,5 +33,10 @@ $(document).ready(function() {
     });
 });
 var local = window.localStorage;
-window.localStorage.setItem("key", "Keval");
-document.getElementById("title").innerHTML = window.localStorage.getItem("key");
+document.getElementById("title").innerHTML = window.localStorage.getItem("shopname");
+document.getElementById("user_no").innerHTML = window.localStorage.getItem("user");
+document.getElementById("shop_name").innerHTML = window.localStorage.getItem("shopname");
+document.getElementById("shop_number").innerHTML = window.localStorage.getItem("shopnumber");
+document.getElementById("shop_details").innerHTML = window.localStorage.getItem("shopdetails");
+document.getElementById("shop_address").innerHTML = window.localStorage.getItem("shopaddress");
+document.getElementById("shop_email").innerHTML = window.localStorage.getItem("shopemail");

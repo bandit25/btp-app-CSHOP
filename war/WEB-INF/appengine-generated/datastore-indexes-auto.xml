@@ -1,4 +1,11 @@
-<!-- Indices written at Tue, 7 Apr 2015 13:16:18 IST -->
+<!-- Indices written at Fri, 17 Apr 2015 14:49:12 IST -->
 
-<datastore-indexes/>
+<datastore-indexes>
 
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Order" ancestor="false" source="auto">
+        <property name="state" direction="asc"/>
+        <property name="timestamp" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

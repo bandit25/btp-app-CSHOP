@@ -5,6 +5,7 @@ $(document).ready(function(){
 		if($('#regform')[0].checkValidity()){
 			
 				$.post("https://7-dot-btp-app.appspot.com/Register",
+						//"Register",
 					  {number : $("#mobile").val() ,
 					   shopname : $("#shopname").val() ,
 					   shopnumber: $("#shopnumber").val() ,
@@ -30,16 +31,94 @@ $(document).ready(function(){
 				
 		}else{
 			event.preventDefault();
-			$('#regform :input:visible[required="required"]').each(function()
+			$('#regform :input:visible[required="required"]').each(function(index)
 					{
 					    if(!this.validity.valid)
 					    {
+					    	$(this).focus();
 					    	
-					        $(this).focus();
-					        // break
-					        //alert($('#password').attr("title"));
+					    	if(index==0){
+					    		 $("#err_name").show();
+					    		 $("#err_mobile").hide();
+						    	 $("#err_shopnumber").hide();
+						    	 $("#err_shopdetails").hide();
+						    	 $("#err_shopaddress").hide();
+						    	 $("#err_shopemail").hide();
+						    	 $("#err_password").hide();
+						    	 $("#err_repassword").hide();
+					    	}else if(index==1){
+					    		 $("#err_name").hide();
+						    	 $("#err_mobile").show();
+						    	 $("#err_shopnumber").hide();
+						    	 $("#err_shopdetails").hide();
+						    	 $("#err_shopaddress").hide();
+						    	 $("#err_shopemail").hide();
+						    	 $("#err_password").hide();
+						    	 $("#err_repassword").hide();
+						    	
+					    	}else if(index==2){
+					    		 $("#err_name").hide();
+						    	 $("#err_mobile").hide();
+						    	 $("#err_shopnumber").show();
+						    	 $("#err_shopdetails").hide();
+						    	 $("#err_shopaddress").hide();
+						    	 $("#err_shopemail").hide();
+						    	 $("#err_password").hide();
+						    	 $("#err_repassword").hide();
+					    	}else if(index==3){
+					    		 $("#err_name").hide();
+						    	 $("#err_mobile").hide();
+						    	 $("#err_shopnumber").hide();
+						    	 $("#err_shopdetails").show();
+						    	 $("#err_shopaddress").hide();
+						    	 $("#err_shopemail").hide();
+						    	 $("#err_password").hide();
+						    	 $("#err_repassword").hide();
+					    		
+					    	}else if(index==4){
+					    		 $("#err_name").hide();
+						    	 $("#err_mobile").hide();
+						    	 $("#err_shopnumber").hide();
+						    	 $("#err_shopdetails").hide();
+						    	 $("#err_shopaddress").show();
+						    	 $("#err_shopemail").hide();
+						    	 $("#err_password").hide();
+						    	 $("#err_repassword").hide();
+					    		
+					    	}else if(index==5){
+					    		 $("#err_name").hide();
+						    	 $("#err_mobile").hide();
+						    	 $("#err_shopnumber").hide();
+						    	 $("#err_shopdetails").hide();
+						    	 $("#err_shopaddress").hide();
+						    	 $("#err_shopemail").show();
+						    	 $("#err_password").hide();
+						    	 $("#err_repassword").hide();
+					    		
+					    	}else if(index==6){
+					    		 $("#err_name").hide();
+						    	 $("#err_mobile").hide();
+						    	 $("#err_shopnumber").hide();
+						    	 $("#err_shopdetails").hide();
+						    	 $("#err_shopaddress").hide();
+						    	 $("#err_shopemail").hide();
+						    	 $("#err_password").show();
+						    	 $("#err_repassword").hide();
+					    		
+					    	}else if(index==7){
+					    		 $("#err_name").hide();
+						    	 $("#err_mobile").hide();
+						    	 $("#err_shopnumber").hide();
+						    	 $("#err_shopdetails").hide();
+						    	 $("#err_shopaddress").hide();
+						    	 $("#err_shopemail").hide();
+						    	 $("#err_password").hide();
+						    	 $("#err_repassword").show();
+					    	}					        
+					        
 					        return false;
 					    }
+					    
 					});
 		}	
 		

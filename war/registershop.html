@@ -10,6 +10,11 @@
     <title>Title</title>
     <link href="www/css/bootstrap.min.css" rel="stylesheet">
     <link href="www/css/reg.css" rel="stylesheet">
+    <style type="text/css">
+	.error{
+		color:red;
+	}
+	</style>
 	
   </head>
  
@@ -22,47 +27,47 @@
 					<hr class="colorgraph">
 					
 					<div class="form-group">
-						<input type="text" id="shopname" class="form-control input-lg" placeholder="Shop Name" tabindex="1">
-						<div id="err_fname" style="color:#F03"></div><br>
+						<input type="text" id="shopname" class="form-control input-lg" placeholder="Shop Name" tabindex="1" required pattern="[a-zA-Z\s]+">
+						<div id="err_name" class="error" style="display:none;">Name should only consists of alphabets and/or spaces</div>
 					</div>
 					
 					<div class="form-group">
-						<input type="text" id="mobile" class="form-control input-lg" placeholder="Mobile Number" tabindex="2">
-						<div id="err_mobile" style="color:#F03"></div><br>
+						<input type="text" id="mobile" class="form-control input-lg" placeholder="Mobile Number" tabindex="2" required pattern="[789][0-9]{9}">
+						<div id="err_mobile" class="error" style="display:none;">Mobile number should be of 10 digits and start from 7/8/9</div>
 					</div>
 					
 					<div class="form-group">
-						<input type="text" id="shopnumber" class="form-control input-lg" placeholder="Shop Number" tabindex="3">
-						<div id="err_shopnumber" style="color:#F03"></div><br>
+						<input type="text" id="shopnumber" class="form-control input-lg" placeholder="Shop Number" tabindex="3" required>
+						<div id="err_shopnumber" class="error" style="display:none;">Please enter shop number</div>
 					</div>
 					
 					<div class="form-group">
-						<input type="text" id="shopdetails" class="form-control input-lg" placeholder="Shop Details" tabindex="4">
-						<div id="err_shopdetails" style="color:#F03"></div><br>
+						<input type="text" id="shopdetails" class="form-control input-lg" placeholder="Shop Details" tabindex="4" required>
+						<div id="err_shopdetails" class="error" style="display:none;">Please enter shop details</div>
 					</div>
 					
 					<div class="form-group">
-						<input type="text" id="shopaddress" class="form-control input-lg" placeholder="Shop Address" tabindex="5">
-						<div id="err_locality" style="color:#F03"></div><br>
+						<input type="text" id="shopaddress" class="form-control input-lg" placeholder="Shop Address" tabindex="5"required>
+						<div id="err_address" class="error" style="display:none;">Please enter your address</div>
 					</div>			
 
 					<div class="form-group">
-						<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Shop Email" tabindex="6">
-						<div id="err_email" style="color:#F03"></div><br>
+						<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Shop Email" tabindex="6" required>
+						<div id="err_email" class="error" style="display:none;">Invalid E-MAIL </div>
 					</div>
 					
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="form-group">
-								<input type="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="7">
-								<div id="err_pass" style="color:#F03"></div><br>
+								<input type="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="7" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="form.repassword.pattern = this.value;">
+								<div id="err_password" class="error" style="display:none;">Password must contain at least 6 characters, including UPPER/lowercase and numbers.</div>
 							</div>
 						</div>
 						
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="form-group">
-								<input type="password" id="repassword" class="form-control input-lg" onBlur="repassword_validate()" placeholder="Confirm Password" tabindex="8">
-								<div id="err_repass" style="color:#F03"></div><br>
+								<input type="password" id="repassword" class="form-control input-lg" placeholder="Confirm Password" tabindex="8" required>
+								<div id="err_repassword" class="error" style="display:none;">Please enter the same password</div>
 							</div>
 							
 						</div>

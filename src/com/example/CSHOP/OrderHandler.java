@@ -57,9 +57,16 @@ public class OrderHandler extends HttpServlet {
 			order.setState(state);
 			Order o = oapi.updateOrder(order);
 			if(o!=null){
+				
 				PrintWriter out= resp.getWriter();
-	            out.println("Order Modified Successfully");
 				resp.addHeader("AUTH", "1");
+				if(state==1){					
+					out.println("Order State: Acknowledged");
+				}else if(state==2){					
+					out.println("Order State: Delivered");
+				}else if(state==3){					
+					out.println("Order State: Completed");
+				}
 	        }else{
 	        	PrintWriter out= resp.getWriter();
 	            out.println("Error.Please try again");

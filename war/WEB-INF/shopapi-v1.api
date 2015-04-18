@@ -115,16 +115,16 @@
           "password" : {
             "type" : "string"
           },
-          "shopName" : {
+          "shopAddress" : {
+            "type" : "string"
+          },
+          "shopDetails" : {
             "type" : "string"
           },
           "shopNumber" : {
             "type" : "string"
           },
-          "shopAddress" : {
-            "type" : "string"
-          },
-          "shopDetails" : {
+          "shopName" : {
             "type" : "string"
           }
         }

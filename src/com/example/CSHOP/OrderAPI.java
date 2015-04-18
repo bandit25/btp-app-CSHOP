@@ -35,7 +35,7 @@ public class OrderAPI {
 		q.setFilter("customer_id == noParam");
 		q.declareParameters("String noParam");
 		q.setOrdering("timestamp desc");
-		q.setRange(0, 7);
+		//q.setRange(0, 7);
 		try{
 			
 			if (cursorString != null && cursorString != "") {
@@ -74,10 +74,10 @@ public class OrderAPI {
 		Cursor cursor = null;
 		PersistenceManager mgr = getPersistenceManager();
 		Query q = mgr.newQuery(Order.class);
-		q.setFilter("state != stateParam");
+		q.setFilter("state <= stateParam");
 		q.declareParameters("int stateParam");
 		q.setOrdering("state asc, timestamp desc");
-		q.setRange(0, 7);
+		//q.setRange(0, 7);
 		try{
 			
 			if (cursorString != null && cursorString != "") {
